@@ -27,7 +27,6 @@ onMounted(async ( ) => {
   if (window.IntersectionObserver) {
     const scrollObserver = new IntersectionObserver((entries) => {
       device.isTop = entries[0].isIntersecting
-      console.log(device.isTop)
     })
     scrollObserver.observe(document.getElementById('scroll-detector')!)
   }

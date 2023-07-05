@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 // @ts-ignore
   app: {
     head: {
-      titleTemplate: 'CST-火鸡养殖中心',
+      titleTemplate: 'CST-北京理工大学网络空间安全学院',
       script: [],
       htmlAttrs: {
         lang: 'zh-CN',
