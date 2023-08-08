@@ -3,9 +3,9 @@
     <div v-show="!$device.isTop" class="w-full h-1 bg-red-800 bg-opacity-80"></div>
     <header :class="{
       'bg-white text-red-800 text-xl': $device.isTop,
-      'bg-red-800 bg-opacity-80 text-base': !$device.isTop,
+      'bg-red-800 text-white bg-opacity-80 text-base': !$device.isTop,
     }"
-            class="h-auto duration-300 border-transparent text-white p-3">
+            class="h-auto duration-300 border-transparent p-3">
       <div class="container mx-auto max-w-8xl h-auto flex items-center justify-between">
         <RouterLink
           class="ml-2 font-eng flex-shrink-0 py-1 font-bold"
