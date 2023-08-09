@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-red-700 bg-opacity-90 justify-center overflow-x-hidden">
+  <div class="bg-blue-700 bg-opacity-90 justify-center overflow-x-hidden">
     <div class="fixed inset-0 top-0 left-0 w-full h-full object-cover">
       <img class="h-full" src="../assets/image/background-fix.jpg"/>
     </div>
     <div class="w-full h-full">
       <!-- 顶层 -->
       <div class="relative flex justify-center w-full">
-        <div class="absolute flex flex-col max-w-8xl justify-items-start justify-center font-bold gap-4 z-10 text-white" style="min-height: 70vh; padding-top: 20vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        <div class="absolute flex flex-col max-w-8xl justify-items-start justify-center gap-4 z-10 text-white" style="min-height: 70vh; padding-top: 20vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
           <div class=" text-5xl">欢迎来到</div>
           <div class=" text-5xl">北京理工大学</div>
           <div class=" text-6xl">网络安全实验室</div>
@@ -37,9 +37,9 @@
       <!-- 中间间隔 -->
       <div class="relative h-8 w-full bg-white z-10"></div>
       <!-- 第二层 -->
-      <div class="relative w-full bg-red-700 bg-opacity-50">
-        <div class="relative flex flex-col justify-items-center items-center mx-auto max-w-7xl font-bold gap-20 text-white" style="min-height: 60vh; padding-top: 10vh; padding-bottom: 10vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-          <div class="text-5xl">{{ infoContent.title }}</div>
+      <div class="relative w-full bg-sky-700 bg-opacity-50">
+        <div class="relative flex flex-col justify-items-center items-center mx-auto max-w-7xl gap-20 text-white" style="min-height: 60vh; padding-top: 10vh; padding-bottom: 10vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+          <div class="text-6xl">{{ infoContent.title }}</div>
           <div class=" grid grid-cols-4 items-center justify-items-center gap-6">
             <div v-for="info in infoContent.content" class="flex flex-col items-center justify-items-center gap-6">
               <div class="text-6xl text-yellow-400">
@@ -57,7 +57,7 @@
       <div class="relative h-8 w-full bg-white z-10"></div>
       <!-- 第三层 -->
       <div class="relative w-full bg-white z-10">
-        <div class="relative flex flex-col justify-items-center items-center mx-auto max-w-7xl font-bold gap-20 z-10" style="min-height: 60vh; padding-top: 10vh; padding-bottom: 10vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        <div class="relative flex flex-col justify-items-center items-center mx-auto max-w-7xl font-bold gap-20 z-10" style="min-height: 60vh; padding-top: 10vh; padding-bottom: 10vh;">
           <div class="text-5xl">{{ newsContent.title }}</div>
           <div class="grid grid-cols-3 gap-6 p-3 justify-center items-center">
             <img v-for="news in newsContent.content" :src="'_nuxt/assets/image/news/' + `${news.pic}`" />
@@ -75,7 +75,7 @@
       <!-- 中间间隔 -->
       <div class="relative h-8 w-full bg-white z-10" id="background-change"></div>
       <!-- 第四层 -->
-      <div class="relative w-full bg-red-700 bg-opacity-50">
+      <div class="relative w-full bg-sky-700 bg-opacity-50">
         <div class="relative flex flex-col justify-items-center items-center mx-auto max-w-7xl font-bold gap-6 text-white" style="min-height: 60vh; padding-top: 10vh; padding-bottom: 10vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
           <div class="text-5xl">{{ achieveContent.title }}</div>
           <div class="text-xl" style="padding-left: 50vh;">{{ achieveContent.subtitle }}</div>
@@ -95,7 +95,7 @@
       <!-- 中间间隔 -->
       <div class="relative h-8 w-full bg-white z-10" id="background-change"></div>
       <!-- 第五层 -->
-      <div class="relative w-full bg-red-700 bg-opacity-50">
+      <div class="relative w-full bg-sky-700 bg-opacity-50">
         <div class="relative flex flex-col justify-items-center items-center mx-auto max-w-7xl font-bold gap-6 text-white" style="padding-top: 10vh; padding-bottom: 10vh; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
           <div class="text-5xl">测试展示内容（新闻）</div>
         </div>
@@ -112,47 +112,47 @@
               <div class="absolute bottom-0 w-full h-8 bg-gradient-to-t from-gray-900 to-transparent shadow"></div>
             </div>
 
-            <div class="relative col-span-1 grid grid-col-1 gap-3 w-full h-full">
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+            <div class="relative col-span-1 flex flex-col gap-3 w-full h-full">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[0].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[1].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
             </div>
 
-            <div class="relative col-span-1 grid grid-col-1 gap-3 w-full h-full">
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+            <div class="relative col-span-1 flex flex-col gap-3 w-full h-full">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[2].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[1].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
             </div>
 
-            <div class="relative col-span-1 grid grid-col-1 gap-3 w-full h-full">
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+            <div class="relative col-span-1 flex flex-col gap-3 w-full h-full">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[2].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[1].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
             </div>
 
-            <div class="relative col-span-1 grid grid-col-1 gap-3 w-full h-full">
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+            <div class="relative col-span-1 flex flex-col gap-3 w-full h-full">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[2].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
-              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg">
+              <div class="relative bg-opacity-50 flex justify-center p-6 text-xl shadow-lg h-full">
                 {{ newsContent.content[1].title }}
-                <div class="absolute w-full h-1 bg-red-700 bottom-0"></div>
+                <div class="absolute w-full h-1 bg-sky-600 bottom-0"></div>
               </div>
             </div>
 

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-show="!$device.isTop" class="w-full h-1 bg-red-800 bg-opacity-80"></div>
+    <div v-show="!$device.isTop" class="w-full h-1 bg-sky-800 bg-opacity-80"></div>
     <header :class="{
-      'bg-white text-red-800 text-xl': $device.isTop,
-      'bg-red-800 text-white bg-opacity-80 text-base': !$device.isTop,
+      'bg-white text-sky-800 text-xl': $device.isTop,
+      'bg-sky-800 text-white bg-opacity-80 text-base': !$device.isTop,
     }"
             class="h-auto duration-300 border-transparent p-3">
       <div class="container mx-auto max-w-8xl h-auto flex items-center justify-between">
@@ -47,7 +47,7 @@ const pages = ref([
     to: '/',
   },{
     name: '实验室概况',
-    to: '/lab',
+    to: '/overview',
   },{
     name: '师资团队',
     to: '/professor',
@@ -62,7 +62,7 @@ const pages = ref([
     to: '/freshman',
   },{
     name: '国际合作',
-    to: '/freshman',
+    to: '/cooperation',
   }
 ])
 
